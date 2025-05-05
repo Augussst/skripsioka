@@ -5,9 +5,9 @@
   font-style: normal;
 }
 
-.h5p-content {
+/* .h5p-content {
   max-width: 1200px !important;
-}
+} */
 
 .h5p-content h2 > span {
   font-size: 42px;
@@ -27,4 +27,35 @@
 
 .h5p-image > img {
   margin-inline: auto;
+}
+
+.h5p-interactive-book-enter-fullscreen::after {
+  content: "Klik disini untuk mengaktifkan mode Fullscreen untuk penggunaan modul yang lebih baik";
+  position: absolute;
+  top: 100%;
+  width: 250px;
+  height: auto;
+  background-color: #f1f3f9;
+  right: 0%;
+  margin-right: 8px;
+  margin-top: 8px;
+  border: #1768c4 solid 2px;
+  border-radius: 5px;
+  padding: 5px;
+  opacity: 1;
+  animation: fade 5s ease forwards;
+}
+
+.h5p-interactive-book-enter-fullscreen:hover::after {
+  opacity: 1; /* restores full opacity on hover */
+  animation: none; /* cancel the animation when hovered */
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
